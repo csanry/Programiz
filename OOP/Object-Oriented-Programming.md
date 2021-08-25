@@ -108,9 +108,103 @@ print(blu.sing("'Happy'"))
 # Blu is now dancing
 print(blu.dance())
 ```
+---
+
+#### Inheritance
+
+- Inheritance is a way of creating a new class for using details of an existing class without modifying it. 
+
+- The newly formed class is a derived class (or child class). 
+
+- Similarly, the existing class is a base class (or parent class).
+
+```python
+# parent class
+class Bird: 
+    def __init__(self):
+        print('Bird is ready')
+    def who_is_this(self):
+        print('Bird')
+    def swim(self):
+        print('Swim faster')
+    
+# child class 
+class Penguin(Bird):
+    def __init__(self):
+        # call super() function to call the Parent
+        super().__init__()
+        print('Penguin is ready')
+    # modifies the parent method
+    def who_is_this(self):
+        print('Penguin')
+    def run(self):
+        print('Run faster')
+
+peggy = Penguin()
+peggy.who_is_this()
+peggy.swim()
+peggy.run()
+```
+
+```
+Bird is ready
+Penguin is ready
+Penguin
+Swim faster
+Run faster
+```
+
+---
+
+#### Encapsulation
+
+- We can restrict access to methods and variables. 
+
+- This prevents data from direct modification which is called encapsulation.
+
+- We denote private attributes using underscores as the prefix i.e single `_` or double `__`. This is by convention.
+
+```python
+class Computer:
+    def __init__(self):
+        self.__maxprice = 900
+    
+    def sell(self):
+        print(f'Selling Price: {self.__maxprice}')
+    
+    def set_max_price(self, price):
+        self.__maxprice = price
+
+c = Computer()
+c.sell()
+
+# change the price
+c.__maxprice = 1000
+c.sell()
+
+# using setter function
+c.set_max_price(1000)
+c.sell()
+```
+
+```
+Selling Price: 900
+Selling Price: 900
+Selling Price: 1000
+```
+
+- In the above program, we defined a `Computer` class
+
+- self.__maxprice can't be modified using assignment.
+
+- To modify the function, we need to use a setter function.
+
+---
+
 
 
 **TO BE CONTINUED >>** 
+
 
 
 
