@@ -2,13 +2,13 @@
 
 ---
 
-#### An object has two characteristics:
+#### An object has two characteristics
 
 - Attributes
 
 - Behavior
 
-#### Using an example:
+#### For example
 
 A parrot is an object as it has the following properties:
 
@@ -37,7 +37,7 @@ birdy = Parrot()
 
 ---
 
-#### Building on the class
+#### Building on the class - class and instance attributes
 
 - We can add more details on parrots by building on the class.
 
@@ -156,11 +156,13 @@ Run faster
 
 #### Encapsulation
 
-- We can restrict access to methods and variables. 
+- We can restrict access to methods and variables using pseudo-private attributes. 
+
+- We denote pseudo-private attributes using double underscores as the prefix i.e `__myattr`. 
 
 - This prevents data from direct modification which is called encapsulation.
 
-- We denote private attributes using underscores as the prefix i.e single `_` or double `__`. This is by convention.
+- By convention, we represent internal attributes using a single underscore as the prefix i.e `_myattr`.
 
 ```python
 class Computer:
@@ -191,7 +193,7 @@ Selling Price: 900
 Selling Price: 1000
 ```
 
-- In the above program, we defined a `Computer` class
+- In the above program, we defined a `Computer` class.
 
 - self.__maxprice can't be modified using assignment.
 
@@ -202,9 +204,11 @@ Selling Price: 1000
 
 #### Polymorphism
 
-Polymorphism is an ability (in OOP) to use a common interface for multiple forms (data types).
+Polymorphism is the ability to use a common interface to operate on objects of different classes.
 
-Suppose, we need to color a shape, there are multiple shape options (rectangle, square, circle). However we could use the same method to color any shape. This concept is called Polymorphism.
+Suppose, we need to color a shape, there are multiple shape options (rectangle, square, circle). 
+
+However we could use the same method name and signature and to color any shape. 
 
 ```python
 class Parrot:
@@ -247,6 +251,7 @@ Penguin can't fly
 
 ---
 
+#### Summary
 
 - Object-Oriented Programming makes the program easy to understand as well as efficient.
 
@@ -256,10 +261,6 @@ Penguin can't fly
 
 - Polymorphism allows the same interface for different objects, so programmers can write efficient code.
 
-
-
-
-**TO BE CONTINUED >>** 
 
 
 
