@@ -60,21 +60,19 @@ print(tweety.__class__.species)
 print(tweety.name)
 ```
 
-- In the above program, we created a class with the name Parrot. 
+- In the above program, we created a class with the name `Parrot`. 
 
 - Then, we defined attributes. The attributes are a characteristic of an object.
 
-- These attributes are defined inside the __init__ method of the class. 
+- These attributes are defined inside the `__init__()` method of the class. 
 
-- It is the initializer method that is first run as soon as the object is created.
+- It is the constructor method that is run as soon as the object is created.
 
-- Then, we create instances of the Parrot class (Tweety). 
-
-- We can access the class attribute using __class__.species. 
+- We can access the class attribute using `__class__.species`. 
 
 - Class attributes are the same for all instances of a class. 
 
-- Similarly, we access the instance attributes using tweety.name and tweety.age. 
+- Similarly, we access the instance attributes using `tweety.name` and `tweety.age`. 
 
 - Instance attributes are different for every instance of a class.
 
@@ -200,6 +198,64 @@ Selling Price: 1000
 - To modify the function, we need to use a setter function.
 
 ---
+
+
+#### Polymorphism
+
+Polymorphism is an ability (in OOP) to use a common interface for multiple forms (data types).
+
+Suppose, we need to color a shape, there are multiple shape options (rectangle, square, circle). However we could use the same method to color any shape. This concept is called Polymorphism.
+
+```python
+class Parrot:
+    def fly(self):
+        print("Parrot can fly")
+    def swim(self):
+        print("Parrot can't swim")
+
+class Penguin:
+    def fly(self):
+        print("Penguin can't fly")
+    def swim(self):
+        print("Penguin can swim")
+
+# common interface
+def flying_test(bird):
+    bird.fly()
+
+# instantiate objects
+blu = Parrot()
+peggy = Penguin()
+
+# passing the object
+flying_test(blu)
+flying_test(peggy)
+```
+
+```
+Parrot can fly
+Penguin can't fly
+```
+
+- In the above program, we defined two classes `Parrot` and `Penguin`. 
+
+- Each of them have a common `fly()` method. However, their functions are different.
+
+- To use polymorphism, we created a common interface i.e `flying_test()` function that takes any object and calls the object's `fly()` method.
+
+- Thus, when we passed the `blu` and `peggy` objects in the `flying_test()` function, it ran effectively.
+
+---
+
+
+- Object-Oriented Programming makes the program easy to understand as well as efficient.
+
+- Since the class is sharable, the code can be reused.
+
+- Data is safe and secure with data abstraction.
+
+- Polymorphism allows the same interface for different objects, so programmers can write efficient code.
+
 
 
 
